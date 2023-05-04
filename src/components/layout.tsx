@@ -12,7 +12,7 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <Navbar links={navigationData.links} />
       <main>{children}</main>
-      <Footer />
+      <Footer links={[]} />
     </>
   );
 }

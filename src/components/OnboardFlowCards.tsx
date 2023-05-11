@@ -36,7 +36,7 @@ const useStyles = createStyles((theme) => ({
 
   card: {
     border: `${rem(1)} solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[1]
+      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[5]
     }`,
   },
 
@@ -66,6 +66,10 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.gray[2]
+        : [theme.colors.gray[9]],
 
     [theme.fn.smallerThan("sm")]: {},
   },

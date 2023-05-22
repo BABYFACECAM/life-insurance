@@ -7,6 +7,7 @@ import {
   createStyles,
   rem,
 } from "@mantine/core";
+import { useRouter } from "next/router";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -101,6 +102,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function Hero() {
+  const router = useRouter();
   const { classes, cx } = useStyles();
   const heroTitle = `We're all going to die`;
   const heroSubtitle = `and 50% of Americans don't have health insurance.`;
@@ -131,6 +133,7 @@ export function Hero() {
             variant="filled"
             className={classes.control}
             size="lg"
+            onClick={() => router.push("/my-price")}
           >
             Get My Price
           </Button>

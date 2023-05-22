@@ -139,7 +139,7 @@ export default function Navbar({ links }: HeaderActionProps) {
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
-        <Group spacing={2}>
+        <Group spacing={3}>
           <ActionIcon
             variant="outline"
             color={dark ? "yellow" : "blue"}
@@ -148,7 +148,7 @@ export default function Navbar({ links }: HeaderActionProps) {
           >
             {dark ? <Sun size={"1.1rem"} /> : <Moon size={"1.1rem"} />}
           </ActionIcon>
-          <Button radius="xs" h={30} variant={"outline"} uppercase>
+          <Button radius="xs" h={30} m={10} variant={"outline"} uppercase>
             Get free quote
           </Button>
         </Group>

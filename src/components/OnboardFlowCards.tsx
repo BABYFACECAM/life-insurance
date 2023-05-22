@@ -12,6 +12,7 @@ import {
   Center,
 } from "@mantine/core";
 import { onboardFlowProps, onboardFlowData } from "@/data/onboardFlowData";
+import { useRouter } from "next/router";
 
 const useStyles = createStyles((theme) => ({
   title: {
@@ -76,6 +77,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function OnboardFlowCards() {
+  const router = useRouter();
   const { classes } = useStyles();
   const cf = onboardFlowData.map((cf) => (
     <Card
@@ -122,6 +124,7 @@ export function OnboardFlowCards() {
             variant={"filled"}
             radius={"md"}
             size="lg"
+            onClick={() => router.push("/my-price")}
           >
             Get My Price
           </Button>

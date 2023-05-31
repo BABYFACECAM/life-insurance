@@ -13,8 +13,8 @@ export default function Home() {
     <main className={`flex min-h-screen flex-col ${inter.className}`}>
       <Hero />
       <OnboardFlowCards />
-      <Faq />
       <Testimonial />
+      <Faq />
     </main>
   );
 }

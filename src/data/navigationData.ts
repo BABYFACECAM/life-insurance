@@ -9,7 +9,7 @@ export interface HeaderActionProps {
 export const navigationData: HeaderActionProps = {
   links: [
     {
-      link: "/index",
+      link: "/",
       label: "Home",
     },
     {
@@ -39,7 +39,7 @@ export const navigationData: HeaderActionProps = {
       label: "Why Choose Us",
     },
     {
-      link: "/contact",
+      link: "/contact-us",
       label: "Contact Us",
     },
   ],

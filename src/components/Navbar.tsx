@@ -16,6 +16,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { ChevronIcon as IconChevronDown } from "@mantine/core";
 import { Sun, Moon } from "tabler-icons-react";
+import { useRouter } from "next/router";
 
 const HEADER_HEIGHT = rem(50);
 
@@ -75,14 +76,21 @@ const defaultNavigationData: HeaderActionProps = {
 };
 
 export default function Navbar({ links }: HeaderActionProps) {
+  const router = useRouter();
   const { classes } = useStyles();
   const [opened, { toggle }] = useDisclosure(false);
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
 
+  const handleClick = () => {
+    preventDefault();
+  };
+
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <Menu.Item key={item.link} onClick={() => router.push(`/${link.link}}`)}>
+        {item.label}
+      </Menu.Item>
     ));
 
     if (menuItems) {
@@ -97,7 +105,7 @@ export default function Navbar({ links }: HeaderActionProps) {
             <a
               href={link.link}
               className={classes.link}
-              onClick={(event) => event.preventDefault()}
+              onClick={() => router.push(`/${link.link}`)}
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
@@ -155,4 +163,7 @@ export default function Navbar({ links }: HeaderActionProps) {
       </Container>
     </Header>
   );
+}
+function preventDefault() {
+  throw new Error("Function not implemented.");
 }

@@ -201,6 +201,9 @@ export default function MyPrice() {
             {...form.getInputProps("state")}
           />
         </SimpleGrid>
+        <Button mt={"lg"} type="submit">
+          Submit
+        </Button>
       </form>{" "}
     </Paper>
   );

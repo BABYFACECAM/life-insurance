@@ -51,7 +51,7 @@ interface Testimonial {
 
 export default function Testimonial() {
   return (
-    <Container size="lg" mt={"md"}>
+    <Container size="lg" mt={"lg"}>
       <Grid gutter={40}>
         {testimonials.map((testimonial) => (
           <Col key={testimonial.id} span={12} md={6} lg={4}>

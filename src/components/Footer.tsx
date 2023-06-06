@@ -66,7 +66,7 @@ export default function Footer({ links }: FooterProps) {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <h1 className="text-lg font-bold">Insurance</h1>
+        <h1 className="text-lg font-bold">Barnett Legacy Life</h1>
         <Group className={classes.links}>{items}</Group>
       </Container>
     </div>

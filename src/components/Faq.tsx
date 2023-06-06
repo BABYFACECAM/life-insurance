@@ -8,8 +8,7 @@ import {
   Title,
 } from "@mantine/core";
 
-import image from "../../public/next.svg";
-import { title } from "process";
+import image from "../../public/bll-banner.png";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -34,10 +33,12 @@ const useStyles = createStyles((theme) => ({
         ? theme.colors.dark[1]
         : theme.colors.gray[7],
   },
-}));
 
-const placeholder =
-  "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.";
+  image: {
+    marginTop: theme.spacing.xl,
+    borderRadius: theme.radius.xlm,
+  },
+}));
 
 interface FaqProps {
   id: string;
@@ -80,11 +81,15 @@ export function Faq() {
       <Container size="lg" mt={"md"}>
         <Grid id="faq-grid" gutter={50}>
           <Col span={12} md={6}>
-            <Image src={image.src} alt="Frequently Asked Questions" />
+            <Image
+              src={image.src}
+              alt="Frequently Asked Questions"
+              className={classes.image}
+            />
           </Col>
           <Col span={12} md={6}>
             <Title order={2} ta="left" mt={"xl"} className={classes.title}>
-              Why OptiLife Insurance Is Right For You
+              Why Barnett Legacy Life Insurance Is Right For You
             </Title>
             <Accordion
               chevronPosition="right"

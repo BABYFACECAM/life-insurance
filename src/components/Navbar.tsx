@@ -141,7 +141,7 @@ export default function Navbar({ links }: HeaderActionProps) {
             size="sm"
           />
           <div className="logo">
-            <h1>Insurance</h1>
+            <h1>Barnett Legacy Life</h1>
           </div>
         </Group>
         <Group spacing={5} className={classes.links}>

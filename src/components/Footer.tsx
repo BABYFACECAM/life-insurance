@@ -1,4 +1,6 @@
 import { createStyles, Container, Group, Anchor, rem } from "@mantine/core";
+import Image from "next/image";
+import { Router, useRouter } from "next/router";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -51,6 +53,7 @@ const footerLinks = [
 
 export default function Footer({ links }: FooterProps) {
   const { classes } = useStyles();
+  const router = useRouter();
   const items = footerLinks.map((fl) => (
     <Anchor<"a">
       color="dimmed"
@@ -66,7 +69,13 @@ export default function Footer({ links }: FooterProps) {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <h1 className="text-lg font-bold">Barnett Legacy Life</h1>
+        <Image
+          src="/bll-logo.png"
+          height={160}
+          width={160}
+          alt="Barnett Legacy Life Insurance"
+          onClick={() => router.push("/")}
+        />
         <Group className={classes.links}>{items}</Group>
       </Container>
     </div>

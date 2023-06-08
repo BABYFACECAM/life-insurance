@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { HeaderActionProps } from "@/data/navigationData";
 import {
   createStyles,
@@ -18,7 +19,7 @@ import { ChevronIcon as IconChevronDown } from "@mantine/core";
 import { Sun, Moon } from "tabler-icons-react";
 import { useRouter } from "next/router";
 
-const HEADER_HEIGHT = rem(50);
+const HEADER_HEIGHT = rem(80);
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -31,6 +32,9 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       marginLeft: "0.5rem",
     },
+  },
+  navLogo: {
+    marginTop: "2rem",
   },
 
   links: {
@@ -131,7 +135,7 @@ export default function Navbar({ links }: HeaderActionProps) {
   });
 
   return (
-    <Header height={HEADER_HEIGHT} sx={{ borderBottom: 100 }} mb={20}>
+    <Header height={HEADER_HEIGHT} sx={{ borderBottom: 120 }} mb={20} mt={10}>
       <Container className={classes.inner} fluid>
         <Group>
           <Burger
@@ -141,7 +145,14 @@ export default function Navbar({ links }: HeaderActionProps) {
             size="sm"
           />
           <div className="logo">
-            <h1>Barnett Legacy Life</h1>
+            <Image
+              src="/bll-logo.png"
+              alt="Barnett Legacy Life Insurance"
+              height={120}
+              width={120}
+              className="navLogo"
+              onClick={() => router.push("/")}
+            />
           </div>
         </Group>
         <Group spacing={5} className={classes.links}>

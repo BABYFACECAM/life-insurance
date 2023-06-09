@@ -17,25 +17,21 @@ export const navigationData: HeaderActionProps = {
       label: "Our Plans",
       links: [
         {
-          link: "/docs",
-          label: "Documentation",
+          link: "/term-life",
+          label: "Term Life Insurance",
         },
         {
-          link: "/resources",
-          label: "Resources",
+          link: "/whole-life",
+          label: "Whole Life Insurance",
         },
         {
-          link: "/community",
-          label: "Community",
-        },
-        {
-          link: "/blog",
-          label: "Blog",
+          link: "/final-expense",
+          label: "Final Expense Insurance",
         },
       ],
     },
     {
-      link: "/whyus",
+      link: "/why-us",
       label: "Why Choose Us",
     },
     {

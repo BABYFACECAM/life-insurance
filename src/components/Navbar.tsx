@@ -90,9 +90,9 @@ export default function Navbar({ links }: HeaderActionProps) {
     preventDefault();
   };
 
-  const items = links.map((link) => {
+  const items = links.map((link, links?) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link} onClick={() => router.push(`/${link.link}}`)}>
+      <Menu.Item key={item.link} onClick={() => router.push(`/${link.link}`)}>
         {item.label}
       </Menu.Item>
     ));
